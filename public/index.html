@@ -62,7 +62,8 @@
                     FF0;FF3;FF6;FF9;FFC;FFF'.split(';');
 
       changeColor = function(){
-        document.body.style.backgroundColor = '#' + colors[Math.floor(Math.random() * colors.length)];
+        var color = '#' + colors[Math.floor(Math.random() * colors.length)];
+        document.body.style.backgroundColor = color;
       }
 
       setInterval(changeColor, 20);
