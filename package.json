@@ -1,0 +1,12 @@
+{
+  "name": "shuss-heroku",
+  "version": "0.0.0",
+  "description": "Static app starter for heroku",
+  "author": "",
+  "license": "Beerware",
+  "dependencies": {
+    "coffee-script": "^1.7.1",
+    "shuss": "^1.0.1"
+  },
+  "private": true
+}
