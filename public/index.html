@@ -61,18 +61,18 @@
                     F6C;F6F;F90;F93;F96;F99;F9C;F9F;FC0;FC3;FC6;FC9;FCC;FCF;\
                     FF0;FF3;FF6;FF9;FFC;FFF'.split(';');
 
-      changeColor = function(){
+      var changeColor = function(){
         var color = '#' + colors[Math.floor(Math.random() * colors.length)];
         document.body.style.backgroundColor = color;
+
+        return changeColor;
       }
 
-      setInterval(changeColor, 20);
-      changeColor();
+      setInterval(changeColor(), 20);
 
       document.body.addEventListener('touchstart', function(){
         document.getElementById('song').play();
       });
-
     </script>
   </body>
 </html>
