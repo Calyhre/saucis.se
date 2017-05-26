@@ -3,8 +3,11 @@
   <head>
     <meta charset="utf-8">
     <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'/>
     <title>Saucis.se</title>
+    <meta name="description" content="Une saucisse est un produit de charcuterie composée principalement de viande hachée mélangée à d'autres ingrédients tels que des épices et des condiments, la préparation est ensuite déposée dans un boyau, d'origine intestinal ou synthétique, en forme de tube et refermé aux extrémités." />
+    <link rel="author" href="https://github.com/Calyhre" />
+    <link rel="original-source" href="https://github.com/Calyhre/saucis.se" />
+
     <style>
       html, body {
         position: relative;
@@ -22,23 +25,11 @@
         margin-top: -190px;
         margin-left: -165px;
       }
-      footer{
-        position: absolute;
-        bottom: 20px;
-        width: 100%;
-        text-align: center;
-        color: white;
-        font-family: "Oswald", sans-serif;
-      }
     </style>
   </head>
   <body>
     <img src="sausage.gif" />
-    <audio id="song" src="song.mp3" autoplay loop="true">
-    </audio>
-    <footer>
-      <h3>\o/ PUSH UP THE VOLUME \o/</h3>
-    </footer>
+    <audio id="song" src="song.mp3" autoplay loop="true" />
     <script type="text/javascript" src="favicon.min.js"></script>
     <script>
       var colors = '000;003;006;009;00C;00F;030;033;036;039;03C;03F;060;063;\
@@ -65,7 +56,7 @@
         return changeColor;
       }
 
-      if(window.confirm('Ready to dance ? (Contains strobe lights)')) {
+      if(window.confirm('Ready to dance? (Contains strobe lights)')) {
         setInterval(changeColor(), 20);
       }
 
