@@ -1,15 +1,19 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
   <head>
-    <meta charset="utf-8">
-    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+    <meta charset="utf-8" />
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <title>Saucis.se</title>
-    <meta name="description" content="Une saucisse est un produit de charcuterie composée principalement de viande hachée mélangée à d'autres ingrédients tels que des épices et des condiments, la préparation est ensuite déposée dans un boyau, d'origine intestinal ou synthétique, en forme de tube et refermé aux extrémités." />
+    <meta
+      name="description"
+      content="Une saucisse est un produit de charcuterie composée principalement de viande hachée mélangée à d'autres ingrédients tels que des épices et des condiments, la préparation est ensuite déposée dans un boyau, d'origine intestinal ou synthétique, en forme de tube et refermé aux extrémités."
+    />
     <link rel="author" href="https://github.com/Calyhre" />
     <link rel="original-source" href="https://github.com/Calyhre/saucis.se" />
 
     <style>
-      html, body {
+      html,
+      body {
         position: relative;
         width: 100%;
         height: 100%;
@@ -32,7 +36,7 @@
     <audio id="song" src="song.mp3" autoplay loop="true" />
     <script type="text/javascript" src="favicon.min.js"></script>
     <script>
-      var colors = '000;003;006;009;00C;00F;030;033;036;039;03C;03F;060;063;\
+      var colors = "000;003;006;009;00C;00F;030;033;036;039;03C;03F;060;063;\
                     066;069;06C;06F;090;093;096;099;09C;09F;0C0;0C3;0C6;0C9;\
                     0CC;0CF;0F0;0F3;0F6;0F9;0FC;0FF;300;303;306;309;30C;30F;\
                     330;333;336;339;33C;33F;360;363;366;369;36C;36F;390;393;\
@@ -47,32 +51,39 @@
                     CC0;CC3;CC6;CC9;CCC;CCF;CF0;CF3;CF6;CF9;CFC;CFF;F00;F03;\
                     F06;F09;F0C;F0F;F30;F33;F36;F39;F3C;F3F;F60;F63;F66;F69;\
                     F6C;F6F;F90;F93;F96;F99;F9C;F9F;FC0;FC3;FC6;FC9;FCC;FCF;\
-                    FF0;FF3;FF6;FF9;FFC;FFF'.split(';');
+                    FF0;FF3;FF6;FF9;FFC;FFF".split(";");
 
-      var changeColor = function(){
-        var color = '#' + colors[Math.floor(Math.random() * colors.length)];
+      var changeColor = function () {
+        var color = "#" + colors[Math.floor(Math.random() * colors.length)];
         document.body.style.backgroundColor = color;
 
         return changeColor;
-      }
+      };
 
-      if(window.confirm('Ready to dance? (Contains strobe lights)')) {
+      if (window.confirm("Ready to dance? (Contains strobe lights)")) {
         setInterval(changeColor(), 20);
       }
 
-      document.body.addEventListener('touchstart', function(){
-        document.getElementById('song').play();
-      });
-      favicon.animate([
-        'favicon/icon-0.png',
-        'favicon/icon-1.png',
-        'favicon/icon-2.png',
-        'favicon/icon-3.png',
-        'favicon/icon-4.png',
-        'favicon/icon-5.png',
-        'favicon/icon-6.png',
-        'favicon/icon-7.png',
-      ], 100);
+      var startMusic = function () {
+        document.getElementById("song").play();
+      };
+
+      document.body.addEventListener("touchstart", startMusic);
+      document.body.addEventListener("pointerdown", startMusic);
+
+      favicon.animate(
+        [
+          "favicon/icon-0.png",
+          "favicon/icon-1.png",
+          "favicon/icon-2.png",
+          "favicon/icon-3.png",
+          "favicon/icon-4.png",
+          "favicon/icon-5.png",
+          "favicon/icon-6.png",
+          "favicon/icon-7.png",
+        ],
+        100
+      );
     </script>
   </body>
 </html>
